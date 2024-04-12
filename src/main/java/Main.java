@@ -41,6 +41,9 @@ public class Main {
         }
     }
     public static String task3(String b) {
+        if (b.isEmpty()) {
+            return "Empty string";
+        }
         if ('a' == b.charAt(0)) {
             return "Yes";
         } else {
@@ -49,6 +52,9 @@ public class Main {
     }
 
     public static String task4(String a) {
+        if (a.isEmpty()) {
+            return "Empty string";
+        }
         char first;
         first = a.charAt(0);
         if (first == '1' || first == '2' || first == '3') {
@@ -93,7 +99,9 @@ public class Main {
     }
 
     public static int fibonacci(int num){
-        if (num == 0) {
+        if (num < 0) {
+            return -1;
+        } else if (num == 0) {
             return 0;
         } else if (num == 1) {
             return 1;
